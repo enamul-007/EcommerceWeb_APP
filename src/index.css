@@ -68,15 +68,31 @@
     width: 100%;
     background-color: var(--border_color);
     transform: scale(0);
-    transition: all linear .4s;
+    transition: all linear 0.4s;
   }
 
   .navHover:hover::after {
     transform: scale(1);
   }
 
-  .amount{
-    
+  .amount {
+    position: relative;
   }
 
+  .amount::after {
+    position: absolute;
+    content: '0';
+    left: 11px;
+    top: -9px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    background-color: var(--orange_color);
+    border-radius: 50%;
+    text-align: center;
+    color: var(--white_text_color);
+    font-size: 12px;
+    font-family: var(--Poppins);
+    border: 1px solid var(--border_color);
+}
 }

@@ -85,7 +85,7 @@ const Navbar = () => {
                   <RiUser3Line className="w-8 h-8 p-1 text-2xl rounded-full cursor-pointer text-white_text_color bg-orange_color" />
                 </span>
 
-                {account && (<div className="  absolute h-[208px] w-[225px] right-0 top-[100%] backdrop-blur bg-black_color opacity-[.4]	 rounded ">
+                {account && (<div className="  absolute h-[208px] z-50 w-[225px] right-0 top-[100%] bg-[#3d3d3d] backdrop-blur-2xl opacity-[.9]	 rounded ">
                   <div className="p-5 ">
 
                     <div className="flex py-2  items-center px-2 font-medium cursor-pointer text-white_text_color font-Poppins transition-all hover:basis-[100%] hover:rounded hover:bg-white_color hover:text-black  ">

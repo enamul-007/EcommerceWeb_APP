@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from "react";
 import { category } from '../../../../Data/Data'
 import { FaAngleRight, } from 'react-icons/fa'
 import 'slick-carousel/slick/slick.css'
@@ -8,9 +8,7 @@ import Bnnarimg from '../../../assets/Banner/Banner.jpg'
 
 const index = () => {
 
-    const [currentSlide, setcurrentSlide] = useState(0);
-
-
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const settings = {
         dots: true,
@@ -46,7 +44,10 @@ const index = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginRight: "12px"
+                marginRight: "12px",
+                border: "3px solid white",
+                afterChange: (current) => setCurrentSlide(current),
+
 
             }}   >
 
@@ -60,7 +61,8 @@ const index = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginRight: "12px"
+                marginRight: "12px",
+                afterChange: (current) => setCurrentSlide(current),
 
             }}   >
 
@@ -70,9 +72,9 @@ const index = () => {
 
         ),
 
-        afterchange: function (currentSlide) {
+        afterChange: function (currentSlide) {
 
-            setcurrentSlide(currentSlide)
+            setCurrentSlide(currentSlide)
         },
 
 
